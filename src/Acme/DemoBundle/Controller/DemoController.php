@@ -5,6 +5,7 @@ namespace Acme\DemoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Acme\DemoBundle\Form\ContactType;
+use \ChromePhp;
 
 // these import the "@Route" and "@Template" annotations
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -27,6 +28,9 @@ class DemoController extends Controller
      */
     public function helloAction($name)
     {
+        \ChromePhp::log('hello world');
+        \ChromePhp::log($_SERVER);
+        \ChromePhp::log($name);
         return array('name' => $name);
     }
 
