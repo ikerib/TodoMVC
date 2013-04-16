@@ -1,0 +1,30 @@
+admin_tag:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:Tag:index" }
+
+admin_tag_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:Tag:show" }
+
+admin_tag_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:Tag:new" }
+
+admin_tag_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:Tag:create" }
+    requirements: { _method: post }
+
+admin_tag_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:Tag:edit" }
+
+admin_tag_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:Tag:update" }
+    requirements: { _method: post|put }
+
+admin_tag_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:Tag:delete" }
+    requirements: { _method: post|delete }

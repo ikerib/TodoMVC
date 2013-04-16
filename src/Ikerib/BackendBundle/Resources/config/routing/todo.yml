@@ -1,0 +1,30 @@
+todo:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:Todo:index" }
+
+todo_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:Todo:show" }
+
+todo_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:Todo:new" }
+
+todo_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:Todo:create" }
+    requirements: { _method: post }
+
+todo_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:Todo:edit" }
+
+todo_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:Todo:update" }
+    requirements: { _method: post|put }
+
+todo_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:Todo:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,46 @@
+{% extends '::backend.html.twig' %}
+
+{% block body -%}
+
+<section id="todoapp">
+  <header id="header">
+    <h1>todos</h1>
+    <form  id="new-todo" action="{{ path('todo_create') }}" method="post" {{ form_enctype(form) }}>
+      {{ form_errors(form) }}
+
+
+      {{ form_errors(form.todo) }}
+      {{ form_widget(form.todo) }}
+
+      <div style="display:none;">
+        {{ form_rest(form) }}
+      </div>
+
+    </form>
+    <!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
+  </header>
+  <section id="main">
+    <input id="toggle-all" type="checkbox">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul id="todo-list">
+      {% for entity in entities %}
+        <li {% if entity.completed %}class="completed" {% endif %} data-id="{{ entity.id }}">
+          <div class="view">
+            <input class="toggle" type="checkbox" {% if entity.completed %} checked {% endif %}>
+            <label>{{ entity.todo }}</label>
+            <button class="destroy"></button>
+          </div>
+          <input class="edit" value="{{ entity.todo }}">
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <footer id="footer">
+    <span id="todo-count"><strong>0</strong> item left</span>
+    <button id="clear-completed">Clear completed</button>
+  </footer>
+</section>
+<footer id="info">
+  <p>#ikerib</p>
+</footer>
+{% endblock %}

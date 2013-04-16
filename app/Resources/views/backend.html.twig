@@ -1,0 +1,70 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}BACKEND{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets  '@BackendBundle/Resources/public/css/normalize.min.css'
+                '@BackendBundle/Resources/public/css/main.css'
+                '@BackendBundle/Resources/public/css/mibackend.css'
+                output='css/backend.css' %}
+<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+{% javascripts  '@BackendBundle/Resources/public/js/jquery-1.9.1.min.js'
+                '@BackendBundle/Resources/public/js/modernizr-2.6.2-respond-1.1.0.min.js'
+                '@BackendBundle/Resources/public/js/mibackend.js'
+                output='js/backend.js' %}
+<script src="{{ asset_url }}" type="text/javascript"></script>
+{% endjavascripts %}
+<script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+{% endblock %}
+
+{% block body %}
+
+  <div id="logo"></div>
+  {% block nav %}
+  <nav>
+    <ul class="ultabs">
+
+      {% set miruta = app.request.attributes.get('_route') %}
+
+        <li class="azkena
+            {% if miruta == "admin_config"     or miruta == "admin_config_configurazioa" %} aktiboa {% endif %}">
+            <a href="{{ path('admin_config') }}">Configuración</a>
+        </li>
+
+        <li class="
+            {% if miruta == "admin_residente"  or miruta == "admin_residente_edit" %} aktiboa {% endif %}">
+            <a href="{{ path('admin_residente') }}">Residentes</a>
+        </li>
+
+        <li class="
+            {% if miruta == "admin_habitacion" or miruta == "admin_habitacion_edit" %} aktiboa {% endif %}">
+            <a href="{{ path('admin_habitacion')}}">Habitaciones</a>
+        </li>
+
+        <li class="
+            {% if miruta == "admin_jaula"     or miruta == "admin_jaula_edit" %} aktiboa {% endif %}">
+            <a href="{{ path('admin_jaula') }}">Jaulas</a>
+          </li>
+
+    </ul>
+  </nav>
+  {% endblock %} <!-- NAV -->
+
+  <div id="contenido">
+    {% block contenido %}
+
+    {% endblock %}
+  </div>
+
+  <footer>
+    <br>
+    <p>  &copy; Gitek 2012</p>
+  </footer>
+  </div> <!-- /container -->
+
+{% endblock %}

@@ -1,0 +1,11 @@
+BackendBundle_todo:
+    resource: "@BackendBundle/Resources/config/routing/todo.yml"
+    prefix:   /
+
+BackendBundle_admin_usuario:
+    resource: "@BackendBundle/Resources/config/routing/usuario.yml"
+    prefix:   /admin/usuario
+
+BackendBundle_admin_tag:
+    resource: "@BackendBundle/Resources/config/routing/tag.yml"
+    prefix:   /admin/tag
