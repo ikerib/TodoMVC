@@ -5,6 +5,8 @@ namespace Ikerib\BackendBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use \ChromePhp;
+
 use Ikerib\BackendBundle\Entity\Todo;
 use Ikerib\BackendBundle\Form\TodoType;
 
@@ -21,7 +23,8 @@ class TodoController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        \ChromePhp::log('hello world');
+        \ChromePhp::log($_SERVER);
         $entities = $em->getRepository('BackendBundle:Todo')->findAll();
         $entity = new Todo();
         $form   = $this->createForm(new TodoType(), $entity);

@@ -27,7 +27,9 @@
       "knplabs/knp-gaufrette-bundle": "dev-master",
       "liip/imagine-bundle": "dev-master",
       "jms/serializer-bundle": "0.12.*@dev",
-      "friendsofsymfony/jsrouting-bundle": "1.1.*"
+      "friendsofsymfony/jsrouting-bundle": "1.1.*",
+
+      "ccampbell/chromephp": "dev-master"
 
       },
       "scripts": {

@@ -3,8 +3,51 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4ed709ed90a108a6aef33c4519bed62a",
+    "hash": "0bb1546d8aa226bd134952bd4cfc8686",
     "packages": [
+        {
+            "name": "ccampbell/chromephp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ccampbell/chromephp.git",
+                "reference": "62c379031ce7e9ca81d5abf74001cdde4f28772f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ccampbell/chromephp/zipball/62c379031ce7e9ca81d5abf74001cdde4f28772f",
+                "reference": "62c379031ce7e9ca81d5abf74001cdde4f28772f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ChromePhp": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Craig Campbell",
+                    "email": "iamcraigcampbell@gmail.com",
+                    "homepage": "http://craig.is",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Log variables to the Chrome console (via Chrome Logger Google Chrome extension).",
+            "homepage": "http://github.com/ccampbell/chromephp",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2013-04-13 04:21:56"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.1",
@@ -2416,7 +2459,8 @@
         "knplabs/gaufrette": 20,
         "knplabs/knp-gaufrette-bundle": 20,
         "liip/imagine-bundle": 20,
-        "jms/serializer-bundle": 20
+        "jms/serializer-bundle": 20,
+        "ccampbell/chromephp": 20
     },
     "platform": {
         "php": ">=5.3.3"
