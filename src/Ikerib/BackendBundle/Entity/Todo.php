@@ -71,6 +71,11 @@ class Todo
         return $this->getTodo();
     }
 
+    public function getCsrfIntention($intention)
+    {
+      return sha1(get_class($this).$intention.$this->id);
+    }
+
     /**
      * Get id
      *

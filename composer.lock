@@ -1493,12 +1493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LRotherfield/NotificationBundle.git",
-                "reference": "5d9864d5b31d3bf93a590cdec60c57a4a690b448"
+                "reference": "514310a442af0c26345591cd24136bb0e0b162a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LRotherfield/NotificationBundle/zipball/5d9864d5b31d3bf93a590cdec60c57a4a690b448",
-                "reference": "5d9864d5b31d3bf93a590cdec60c57a4a690b448",
+                "url": "https://api.github.com/repos/LRotherfield/NotificationBundle/zipball/514310a442af0c26345591cd24136bb0e0b162a3",
+                "reference": "514310a442af0c26345591cd24136bb0e0b162a3",
                 "shasum": ""
             },
             "require": {
@@ -1529,7 +1529,7 @@
                 "flash",
                 "notifiaction"
             ],
-            "time": "2013-03-01 16:36:56"
+            "time": "2013-04-16 15:31:06"
         },
         {
             "name": "monolog/monolog",

@@ -23,8 +23,10 @@ todo_update:
     pattern:  /{id}/update
     defaults: { _controller: "BackendBundle:Todo:update" }
     requirements: { _method: post|put }
+    options:
+        expose: true
 
 todo_delete:
-    pattern:  /{id}/delete
+    pattern:  /{id}/delete/{token}
     defaults: { _controller: "BackendBundle:Todo:delete" }
     requirements: { _method: post|delete }
