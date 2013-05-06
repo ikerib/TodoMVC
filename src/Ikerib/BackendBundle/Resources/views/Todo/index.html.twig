@@ -1,4 +1,4 @@
-{% extends '::backend.html.twig' %}
+{% extends '::frontend.html.twig' %}
 
 {% block body -%}
 
@@ -7,7 +7,6 @@
     <h1>todos</h1>
     <form  id="new-todo" action="{{ path('todo_create') }}" method="post" {{ form_enctype(form) }}>
       {{ form_errors(form) }}
-
 
       {{ form_errors(form.todo) }}
       {{ form_widget(form.todo) }}
@@ -40,7 +39,7 @@
     </ul>
   </section>
   <footer id="footer">
-    <span id="todo-count"><strong>0</strong> item left</span>
+    <span id="todo-count"><strong id="elementsRemaining">{{ entities | length }}</strong> item left</span>
     <button id="clear-completed">Clear completed</button>
   </footer>
 </section>
